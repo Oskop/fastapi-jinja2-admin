@@ -1,6 +1,6 @@
-{% extends "layouts/base.html" %}
+{% extends "templates/layouts/base.html" %}
 
-{% block title %} Charts {% endblock %} 
+{% block title %} Charts {% endblock %}
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -134,7 +134,7 @@
 {% block javascripts %}
 
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
-	<script src="/static/assets/js/setting-demo2.js"></script>
+	<script src={{ url_for('assets', path="js/setting-demo2.js") }}></script>
 	<script>
 		var lineChart = document.getElementById('lineChart').getContext('2d'),
 		barChart = document.getElementById('barChart').getContext('2d'),
@@ -166,7 +166,7 @@
 				}]
 			},
 			options : {
-				responsive: true, 
+				responsive: true,
 				maintainAspectRatio: false,
 				legend: {
 					position: 'bottom',
@@ -202,7 +202,7 @@
 				}],
 			},
 			options: {
-				responsive: true, 
+				responsive: true,
 				maintainAspectRatio: false,
 				scales: {
 					yAxes: [{
@@ -222,10 +222,10 @@
 					backgroundColor :["#1d7af3","#f3545d","#fdaf4b"],
 					borderWidth: 0
 				}],
-				labels: ['New Visitors', 'Subscribers', 'Active Users'] 
+				labels: ['New Visitors', 'Subscribers', 'Active Users']
 			},
 			options : {
-				responsive: true, 
+				responsive: true,
 				maintainAspectRatio: false,
 				legend: {
 					position : 'bottom',
@@ -268,7 +268,7 @@
 				]
 			},
 			options: {
-				responsive: true, 
+				responsive: true,
 				maintainAspectRatio: false,
 				legend : {
 					position: 'bottom'
@@ -308,7 +308,7 @@
 				]
 			},
 			options : {
-				responsive: true, 
+				responsive: true,
 				maintainAspectRatio: false,
 				legend : {
 					position: 'bottom'
@@ -320,18 +320,18 @@
 			type: 'bubble',
 			data: {
 				datasets:[{
-					label: "Car", 
-					data:[{x:25,y:17,r:25},{x:30,y:25,r:28}, {x:35,y:30,r:8}], 
+					label: "Car",
+					data:[{x:25,y:17,r:25},{x:30,y:25,r:28}, {x:35,y:30,r:8}],
 					backgroundColor:"#716aca"
 				},
 				{
-					label: "Motorcycles", 
-					data:[{x:10,y:17,r:20},{x:30,y:10,r:7}, {x:35,y:20,r:10}], 
+					label: "Motorcycles",
+					data:[{x:10,y:17,r:20},{x:30,y:10,r:7}, {x:35,y:20,r:10}],
 					backgroundColor:"#1d7af3"
 				}],
 			},
 			options: {
-				responsive: true, 
+				responsive: true,
 				maintainAspectRatio: false,
 				legend: {
 					position: 'bottom'
@@ -397,7 +397,7 @@
 				}]
 			},
 			options : {
-				responsive: true, 
+				responsive: true,
 				maintainAspectRatio: false,
 				legend: {
 					position: 'top',
@@ -439,7 +439,7 @@
 				}],
 			},
 			options: {
-				responsive: true, 
+				responsive: true,
 				maintainAspectRatio: false,
 				legend: {
 					position : 'bottom'
@@ -527,7 +527,7 @@
 				}]
 			},
 			options : {
-				responsive: true, 
+				responsive: true,
 				maintainAspectRatio: false,
 				legend: {
 					display: false
@@ -568,20 +568,20 @@
 							fontStyle: "500"
 						}
 					}]
-				}, 
-				legendCallback: function(chart) { 
-					var text = []; 
-					text.push('<ul class="' + chart.id + '-legend html-legend">'); 
-					for (var i = 0; i < chart.data.datasets.length; i++) { 
-						text.push('<li><span style="background-color:' + chart.data.datasets[i].legendColor + '"></span>'); 
-						if (chart.data.datasets[i].label) { 
-							text.push(chart.data.datasets[i].label); 
-						} 
-						text.push('</li>'); 
-					} 
-					text.push('</ul>'); 
-					return text.join(''); 
-				}  
+				},
+				legendCallback: function(chart) {
+					var text = [];
+					text.push('<ul class="' + chart.id + '-legend html-legend">');
+					for (var i = 0; i < chart.data.datasets.length; i++) {
+						text.push('<li><span style="background-color:' + chart.data.datasets[i].legendColor + '"></span>');
+						if (chart.data.datasets[i].label) {
+							text.push(chart.data.datasets[i].label);
+						}
+						text.push('</li>');
+					}
+					text.push('</ul>');
+					return text.join('');
+				}
 			}
 		});
 

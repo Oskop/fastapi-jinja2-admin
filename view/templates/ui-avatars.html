@@ -1,6 +1,6 @@
-{% extends "layouts/base.html" %}
+{% extends "templates/layouts/base.html" %}
 
-{% block title %} UI Avatars {% endblock %} 
+{% block title %} UI Avatars {% endblock %}
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -36,32 +36,32 @@
 					<div class="card">
 						<div class="card-header">
 							<h4 class="card-title">Sizing</h4>
-							
+
 						</div>
 						<div class="card-body">
 							<p class="demo">
 								<div class="avatar avatar-xxl">
-									<img src="/static/assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle">
+									<img src={{ url_for('assets', path="img/jm_denis.jpg") }} alt="..." class="avatar-img rounded-circle">
 								</div>
 
 								<div class="avatar avatar-xl">
-									<img src="/static/assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle">
+									<img src={{ url_for('assets', path="img/jm_denis.jpg") }} alt="..." class="avatar-img rounded-circle">
 								</div>
 
 								<div class="avatar avatar-lg">
-									<img src="/static/assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle">
+									<img src={{ url_for('assets', path="img/jm_denis.jpg") }} alt="..." class="avatar-img rounded-circle">
 								</div>
 
 								<div class="avatar">
-									<img src="/static/assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle">
+									<img src={{ url_for('assets', path="img/jm_denis.jpg") }} alt="..." class="avatar-img rounded-circle">
 								</div>
 
 								<div class="avatar avatar-sm">
-									<img src="/static/assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle">
+									<img src={{ url_for('assets', path="img/jm_denis.jpg") }} alt="..." class="avatar-img rounded-circle">
 								</div>
 
 								<div class="avatar avatar-xs">
-									<img src="/static/assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle">
+									<img src={{ url_for('assets', path="img/jm_denis.jpg") }} alt="..." class="avatar-img rounded-circle">
 								</div>
 							</p>
 						</div>
@@ -71,20 +71,20 @@
 					<div class="card">
 						<div class="card-header">
 							<h4 class="card-title">Status Indicator</h4>
-							
+
 						</div>
 						<div class="card-body">
 							<p class="demo">
 								<div class="avatar avatar-online">
-									<img src="/static/assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle">
+									<img src={{ url_for('assets', path="img/jm_denis.jpg") }} alt="..." class="avatar-img rounded-circle">
 								</div>
 
 								<div class="avatar avatar-offline">
-									<img src="/static/assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle">
+									<img src={{ url_for('assets', path="img/jm_denis.jpg") }} alt="..." class="avatar-img rounded-circle">
 								</div>
 
 								<div class="avatar avatar-away">
-									<img src="/static/assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle">
+									<img src={{ url_for('assets', path="img/jm_denis.jpg") }} alt="..." class="avatar-img rounded-circle">
 								</div>
 							</p>
 						</div>
@@ -94,16 +94,16 @@
 					<div class="card">
 						<div class="card-header">
 							<h4 class="card-title">Shape</h4>
-							
+
 						</div>
 						<div class="card-body">
 							<p class="demo">
 								<div class="avatar">
-									<img src="/static/assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded">
+									<img src={{ url_for('assets', path="img/jm_denis.jpg") }} alt="..." class="avatar-img rounded">
 								</div>
 
 								<div class="avatar">
-									<img src="/static/assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle">
+									<img src={{ url_for('assets', path="img/jm_denis.jpg") }} alt="..." class="avatar-img rounded-circle">
 								</div>
 							</p>
 						</div>
@@ -113,19 +113,19 @@
 					<div class="card">
 						<div class="card-header">
 							<h4 class="card-title">Group</h4>
-							
+
 						</div>
 						<div class="card-body">
 							<p class="demo">
 								<div class="avatar-group">
 									<div class="avatar">
-										<img src="/static/assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+										<img src={{ url_for('assets', path="img/jm_denis.jpg") }} alt="..." class="avatar-img rounded-circle border border-white">
 									</div>
 									<div class="avatar">
-										<img src="/static/assets/img/chadengle.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+										<img src={{ url_for('assets', path="img/chadengle.jpg") }} alt="..." class="avatar-img rounded-circle border border-white">
 									</div>
 									<div class="avatar">
-										<img src="/static/assets/img/mlane.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+										<img src={{ url_for('assets', path="img/mlane.jpg") }} alt="..." class="avatar-img rounded-circle border border-white">
 									</div>
 									<div class="avatar">
 										<span class="avatar-title rounded-circle border border-white">CF</span>
@@ -145,6 +145,6 @@
 {% block javascripts %}
 
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
-	<script src="/static/assets/js/setting-demo2.js"></script>
+	<script src={{ url_for('assets', path="js/setting-demo2.js") }}></script>
 
 {% endblock javascripts %}

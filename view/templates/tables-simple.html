@@ -1,6 +1,6 @@
-{% extends "layouts/base.html" %}
+{% extends "templates/layouts/base.html" %}
 
-{% block title %} Tables {% endblock %} 
+{% block title %} Tables {% endblock %}
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -38,7 +38,7 @@
 							<div class="card-title">Basic Table</div>
 						</div>
 						<div class="card-body">
-							<div class="card-sub">									
+							<div class="card-sub">
 								This is the basic table view of the ready dashboard :
 							</div>
 							<table class="table mt-3">
@@ -77,7 +77,7 @@
 							<div class="card-title">Striped Rows</div>
 						</div>
 						<div class="card-body">
-							<div class="card-sub">											
+							<div class="card-sub">
 								Add <code class="highlighter-rouge">.table-striped</code> to rows the striped table
 							</div>
 							<table class="table table-striped mt-3">
@@ -301,7 +301,7 @@
 									</tr>
 								</tbody>
 							</table>
-							<div class="card-sub">											
+							<div class="card-sub">
 								You can also add <code class="highlighter-rouge">.table-bordered-bd-*states</code> to change the border color of the table
 							</div>
 							<table class="table table-bordered table-bordered-bd-warning mt-4">
@@ -443,7 +443,7 @@
 {% block javascripts %}
 
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
-	<script src="/static/assets/js/setting-demo2.js"></script>
+	<script src={{ url_for('assets', path="js/setting-demo2.js") }}></script>
 	<script>
 		$('#displayNotif').on('click', function(){
 			var placementFrom = $('#notify_placement_from option:selected').val();
@@ -472,5 +472,5 @@
 			});
 		});
 	</script>
-	
+
 {% endblock javascripts %}

@@ -17,7 +17,7 @@
 		WebFont.load({
 			google: {"families":["Lato:300,400,700,900"]},
 			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"],
-			urls: [{{url_for('assets', path='css/fonts.min.css')}}]},
+			urls: ['/assets/css/fonts.min.css']},
 			active: function() {
 				sessionStorage.fonts = true;
 			}
@@ -25,7 +25,6 @@
 	</script>
 
 	<!-- CSS Files -->
-	<link rel="stylesheet" href={{ url_for('assets', path="font/flaticon/flaticon.css") }}>
 
 	<link rel="stylesheet" href={{ url_for('assets', path="css/bootstrap.min.css") }}>
 	<link rel="stylesheet" href={{ url_for('assets', path="css/atlantis.min.css") }}>
@@ -35,7 +34,7 @@
 
 
 	<!-- <script src="https://use.fontawesome.com/1f37241bba.js"></script> -->
-	<script src="https://kit.fontawesome.com/f75ec2ad01.js" crossorigin="anonymous"></script>
+	<!-- <script src="https://kit.fontawesome.com/f75ec2ad01.js" crossorigin="anonymous"></script> -->
 
 
     <!-- Specific Page CSS goes HERE  -->

@@ -1,6 +1,6 @@
-{% extends "layouts/base.html" %}
+{% extends "templates/layouts/base.html" %}
 
-{% block title %} UI Datatables {% endblock %} 
+{% block title %} UI Datatables {% endblock %}
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -1035,7 +1035,7 @@
 										<div class="modal-header no-bd">
 											<h5 class="modal-title">
 												<span class="fw-mediumbold">
-												New</span> 
+												New</span>
 												<span class="fw-light">
 													Row
 												</span>
@@ -1262,7 +1262,7 @@
 {% block javascripts %}
 
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
-	<script src="/static/assets/js/setting-demo2.js"></script>
+	<script src={{ url_for('assets', path="js/setting-demo2.js") }}></script>
 	<script >
 		$(document).ready(function() {
 			$('#basic-datatables').DataTable({

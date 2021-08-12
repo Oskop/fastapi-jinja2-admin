@@ -6,17 +6,17 @@
 	<title>
         Jinja Atlantis Dark - Icon Menu | AppSeed
 	</title>
-	
+
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-	<link rel="icon" href="/static/assets/img/icon.ico" type="image/x-icon"/>
+	<link rel="icon" href={{ url_for('assets', path="img/icon.ico") }} type="image/x-icon"/>
 	<link rel="canonical" href="https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark">
 
 	<!-- Fonts and icons -->
-	<script src="/static/assets/js/plugin/webfont/webfont.min.js"></script>
+	<script src={{ url_for('assets', path="js/plugin/webfont/webfont.min.js") }}></script>
 	<script>
 		WebFont.load({
 			google: {"families":["Lato:300,400,700,900"]},
-			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['/static/assets/css/fonts.min.css']},
+			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['/assets/css/fonts.min.css']},
 			active: function() {
 				sessionStorage.fonts = true;
 			}
@@ -24,21 +24,21 @@
 	</script>
 
 	<!-- CSS Files -->
-	<link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/static/assets/css/atlantis.min.css">
+	<link rel="stylesheet" href={{ url_for('assets', path="css/bootstrap.min.css") }}>
+	<link rel="stylesheet" href={{ url_for('assets', path="css/atlantis.min.css") }}>
 
 	<!-- CSS Just for demo purpose, don't include it in your project -->
-	<link rel="stylesheet" href="/static/assets/css/demo.css">
+	<link rel="stylesheet" href={{ url_for('assets', path="css/demo.css") }}>
 </head>
 <body data-background-color="dark">
 	<div class="wrapper sidebar_minimize">
 
-		{% include 'includes/navigation.html' %}
+		{% include 'templates/includes/navigation.html' %}
 
-		{% include 'includes/sidebar.html' %}
+		{% include 'templates/includes/sidebar.html' %}
 
 		<div class="main-panel">
-			
+
 			<div class="content">
 				<div class="panel-header bg-primary-gradient">
 					<div class="page-inner py-5">
@@ -248,7 +248,7 @@
 														<tr>
 															<td>
 																<div class="flag">
-																	<img src="/static/assets/img/flags/id.png" alt="indonesia">
+																	<img src={{ url_for('assets', path="img/flags/id.png") }} alt="indonesia">
 																</div>
 															</td>
 															<td>Indonesia</td>
@@ -262,7 +262,7 @@
 														<tr>
 															<td>
 																<div class="flag">
-																	<img src="/static/assets/img/flags/us.png" alt="united states">
+																	<img src={{ url_for('assets', path="img/flags/us.png") }} alt="united states">
 																</div>
 															</td>
 															<td>USA</td>
@@ -276,7 +276,7 @@
 														<tr>
 															<td>
 																<div class="flag">
-																	<img src="/static/assets/img/flags/au.png" alt="australia">
+																	<img src={{ url_for('assets', path="img/flags/au.png") }} alt="australia">
 																</div>
 															</td>
 															<td>Australia</td>
@@ -290,7 +290,7 @@
 														<tr>
 															<td>
 																<div class="flag">
-																	<img src="/static/assets/img/flags/ru.png" alt="russia">
+																	<img src={{ url_for('assets', path="img/flags/ru.png") }} alt="russia">
 																</div>
 															</td>
 															<td>Russia</td>
@@ -304,7 +304,7 @@
 														<tr>
 															<td>
 																<div class="flag">
-																	<img src="/static/assets/img/flags/cn.png" alt="china">
+																	<img src={{ url_for('assets', path="img/flags/cn.png") }} alt="china">
 																</div>
 															</td>
 															<td>China</td>
@@ -318,7 +318,7 @@
 														<tr>
 															<td>
 																<div class="flag">
-																	<img src="/static/assets/img/flags/br.png" alt="brazil">
+																	<img src={{ url_for('assets', path="img/flags/br.png") }} alt="brazil">
 																</div>
 															</td>
 															<td>Brasil</td>
@@ -352,7 +352,7 @@
 								<div class="card-body pb-0">
 									<div class="d-flex">
 										<div class="avatar">
-											<img src="/static/assets/img/logoproduct.svg" alt="..." class="avatar-img rounded-circle">
+											<img src={{ url_for('assets', path="img/logoproduct.svg") }} alt="..." class="avatar-img rounded-circle">
 										</div>
 										<div class="flex-1 pt-1 ml-2">
 											<h6 class="fw-bold mb-1">CSS</h6>
@@ -365,7 +365,7 @@
 									<div class="separator-dashed"></div>
 									<div class="d-flex">
 										<div class="avatar">
-											<img src="/static/assets/img/logoproduct.svg" alt="..." class="avatar-img rounded-circle">
+											<img src={{ url_for('assets', path="img/logoproduct.svg") }} alt="..." class="avatar-img rounded-circle">
 										</div>
 										<div class="flex-1 pt-1 ml-2">
 											<h6 class="fw-bold mb-1">J.CO Donuts</h6>
@@ -378,7 +378,7 @@
 									<div class="separator-dashed"></div>
 									<div class="d-flex">
 										<div class="avatar">
-											<img src="/static/assets/img/logoproduct3.svg" alt="..." class="avatar-img rounded-circle">
+											<img src={{ url_for('assets', path="img/logoproduct3.svg") }} alt="..." class="avatar-img rounded-circle">
 										</div>
 										<div class="flex-1 pt-1 ml-2">
 											<h6 class="fw-bold mb-1">Ready Pro</h6>
@@ -402,7 +402,7 @@
 									<div class="card-list">
 										<div class="item-list">
 											<div class="avatar">
-												<img src="/static/assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle">
+												<img src={{ url_for('assets', path="img/jm_denis.jpg") }} alt="..." class="avatar-img rounded-circle">
 											</div>
 											<div class="info-user ml-3">
 												<div class="username">Jimmy Denis</div>
@@ -414,7 +414,7 @@
 										</div>
 										<div class="item-list">
 											<div class="avatar">
-												<img src="/static/assets/img/chadengle.jpg" alt="..." class="avatar-img rounded-circle">
+												<img src={{ url_for('assets', path="img/chadengle.jpg") }} alt="..." class="avatar-img rounded-circle">
 											</div>
 											<div class="info-user ml-3">
 												<div class="username">Chad</div>
@@ -426,7 +426,7 @@
 										</div>
 										<div class="item-list">
 											<div class="avatar">
-												<img src="/static/assets/img/talha.jpg" alt="..." class="avatar-img rounded-circle">
+												<img src={{ url_for('assets', path="img/talha.jpg") }} alt="..." class="avatar-img rounded-circle">
 											</div>
 											<div class="info-user ml-3">
 												<div class="username">Talha</div>
@@ -438,7 +438,7 @@
 										</div>
 										<div class="item-list">
 											<div class="avatar">
-												<img src="/static/assets/img/mlane.jpg" alt="..." class="avatar-img rounded-circle">
+												<img src={{ url_for('assets', path="img/mlane.jpg") }} alt="..." class="avatar-img rounded-circle">
 											</div>
 											<div class="info-user ml-3">
 												<div class="username">John Doe</div>
@@ -450,7 +450,7 @@
 										</div>
 										<div class="item-list">
 											<div class="avatar">
-												<img src="/static/assets/img/talha.jpg" alt="..." class="avatar-img rounded-circle">
+												<img src={{ url_for('assets', path="img/talha.jpg") }} alt="..." class="avatar-img rounded-circle">
 											</div>
 											<div class="info-user ml-3">
 												<div class="username">Talha</div>
@@ -462,7 +462,7 @@
 										</div>
 										<div class="item-list">
 											<div class="avatar">
-												<img src="/static/assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle">
+												<img src={{ url_for('assets', path="img/jm_denis.jpg") }} alt="..." class="avatar-img rounded-circle">
 											</div>
 											<div class="info-user ml-3">
 												<div class="username">Jimmy Denis</div>
@@ -620,20 +620,20 @@
 				</div>
 			</div>
 
-			{% include 'includes/footer.html' %}
+			{% include 'templates/includes/footer.html' %}
 
 		</div>
-		
+
 		<!-- Custom template | don't include it in your project! -->
-		{% include 'includes/configuration-plugin.html' %}
+		{% include 'templates/includes/configuration-plugin.html' %}
 
 	</div>
 
-	{% include 'includes/scripts.html' %}
+	{% include 'templates/includes/scripts.html' %}
 
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
-	<script src="/static/assets/js/setting-demo.js"></script>
-	<script src="/static/assets/js/demo.js"></script>
+	<script src={{ url_for('assets', path="js/setting-demo.js") }}></script>
+	<script src={{ url_for('assets', path="js/demo.js") }}></script>
 	<script>
 		$('#lineChart').sparkline([102,109,120,99,110,105,115], {
 			type: 'line',

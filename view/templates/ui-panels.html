@@ -1,6 +1,6 @@
-{% extends "layouts/base.html" %}
+{% extends "templates/layouts/base.html" %}
 
-{% block title %} Panels {% endblock %} 
+{% block title %} Panels {% endblock %}
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -273,6 +273,6 @@
 {% block javascripts %}
 
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
-	<script src="/static/assets/js/setting-demo2.js"></script>
+	<script src={{ url_for('assets', path="js/setting-demo2.js") }}></script>
 
 {% endblock javascripts %}
